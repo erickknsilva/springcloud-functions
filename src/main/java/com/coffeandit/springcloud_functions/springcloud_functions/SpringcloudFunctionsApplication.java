@@ -13,15 +13,5 @@ public class SpringcloudFunctionsApplication {
         SpringApplication.run(SpringcloudFunctionsApplication.class, args);
     }
 
-    @Bean
-    public Function<String, String> validarCpf() {
-        return cpf -> {
-            if (cpf != null && cpf.matches("\\d{11}")) {
-                return "CPF válido: " + cpf;
-            } else {
-                return "CPF inválido";
-            }
-        };
-    }
 
 }
