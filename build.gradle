@@ -45,5 +45,5 @@ tasks.register('runFunction', JavaExec) {
     group = 'application'
     mainClass = 'com.coffeandit.springcloud_functions.springcloud_functions.SpringcloudFunctionsApplication'
     classpath = sourceSets.main.runtimeClasspath
-    args = ['--server.port=8080'] // Argumentos que você já tinha
+    args = ['--server.port=8080']
 }
