@@ -33,13 +33,17 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+bootJar {
+    archiveFileName = "${project.name}.jar"
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
 
 tasks.register('runFunction', JavaExec) {
     group = 'application'
-    mainClass = 'org.springframework.cloud.function.adapter.gcp.GcfJarLauncher'
+    mainClass = 'com.coffeandit.springcloud_functions.springcloud_functions.SpringcloudFunctionsApplication'
     classpath = sourceSets.main.runtimeClasspath
-    args = ['--server.port=8080']
+    args = ['--server.port=8080'] // Argumentos que você já tinha
 }
